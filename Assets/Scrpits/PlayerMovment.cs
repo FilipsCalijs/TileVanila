@@ -39,11 +39,24 @@ public class PlayerMovement : MonoBehaviour
         Die();
     }
 
-    void OnFire(InputValue value)
+void OnFire(InputValue value)
+{
+    if (!isAlive) { return; }
+
+    // Instantiate the bullet at the gun's position and rotation
+    GameObject newBullet = Instantiate(bullet, gun.position, transform.rotation);
+
+    // Copy the sorting layer from the shooter to the bullet
+    var shooterRenderer = GetComponent<Renderer>();
+    var bulletRenderer = newBullet.GetComponent<Renderer>();
+
+    if (shooterRenderer != null && bulletRenderer != null)
     {
-        if (!isAlive) { return; }
-        Instantiate(bullet, gun.position, transform.rotation);
+        bulletRenderer.sortingLayerID = shooterRenderer.sortingLayerID;
+        bulletRenderer.sortingOrder = shooterRenderer.sortingOrder;
     }
+}
+
     
     void OnMove(InputValue value)
     {
