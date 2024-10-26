@@ -16,8 +16,8 @@ TagManager:
   - Player
   - Background
   - Bouncing
-  - enemies
-  - 
+  - Enemies
+  - Hazards
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: Climbing
     uniqueID: 1489358409
+    locked: 0
+  - name: Hazards
+    uniqueID: 409334309
     locked: 0
   - name: Enemies
     uniqueID: 1912387101
