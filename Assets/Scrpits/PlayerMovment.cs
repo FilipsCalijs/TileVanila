@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         Die();
     }
 
-void OnFire(InputValue value)
+   void OnFire(InputValue value)
 {
     if (!isAlive) { return; }
 
@@ -57,7 +57,6 @@ void OnFire(InputValue value)
     }
 }
 
-    
     void OnMove(InputValue value)
     {
         if (!isAlive) { return; }
