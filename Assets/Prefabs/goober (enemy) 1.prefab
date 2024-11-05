@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3855263035178663515}
   - component: {fileID: 6639858714173573455}
   m_Layer: 11
-  m_Name: goober (enemy)
+  m_Name: goober (enemy) 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
